@@ -1,0 +1,23 @@
+{
+  "name": "linktree-clone",
+  "version": "1.0.0",
+  "description": "A beautiful Linktree-style profile page with glassmorphism design",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . -l 8000",
+    "preview": "python -m http.server 8000"
+  },
+  "keywords": [
+    "linktree",
+    "link-in-bio",
+    "profile",
+    "glassmorphism",
+    "vanilla-javascript"
+  ],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
+

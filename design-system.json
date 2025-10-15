@@ -1,0 +1,375 @@
+{
+  "metadata": {
+    "name": "Linktree Profile Design System",
+    "version": "1.0.0",
+    "description": "Design system for creating visual link profile pages inspired by Linktree",
+    "reference": "https://linktr.ee/manfung"
+  },
+  "layout": {
+    "type": "single-column",
+    "maxWidth": "680px",
+    "alignment": "center",
+    "spacing": {
+      "sectionGap": "24px",
+      "cardGap": "16px",
+      "innerPadding": "20px"
+    },
+    "background": {
+      "type": "backdrop-blur",
+      "style": "blurred-image",
+      "overlay": "semi-transparent",
+      "fallbackColor": "#f5f5f5"
+    }
+  },
+  "colorScheme": {
+    "primary": {
+      "background": "rgba(255, 255, 255, 0.9)",
+      "backgroundBlur": "20px",
+      "text": "#000000",
+      "accent": "#0066ff"
+    },
+    "secondary": {
+      "text": "#333333",
+      "mutedText": "#666666"
+    },
+    "cards": {
+      "background": "rgba(255, 255, 255, 0.95)",
+      "hoverBackground": "rgba(255, 255, 255, 1)",
+      "border": "1px solid rgba(0, 0, 0, 0.08)",
+      "shadow": "0 2px 12px rgba(0, 0, 0, 0.08)",
+      "hoverShadow": "0 4px 16px rgba(0, 0, 0, 0.12)"
+    }
+  },
+  "typography": {
+    "profileName": {
+      "fontSize": "48px",
+      "fontWeight": "700",
+      "fontFamily": "handwritten, cursive",
+      "letterSpacing": "0.02em",
+      "textTransform": "uppercase",
+      "color": "#000000",
+      "textAlign": "center",
+      "marginBottom": "24px"
+    },
+    "email": {
+      "fontSize": "24px",
+      "fontWeight": "600",
+      "fontFamily": "handwritten, cursive",
+      "color": "#000000",
+      "textAlign": "center",
+      "marginBottom": "8px",
+      "textDecoration": "underline",
+      "textDecorationThickness": "2px"
+    },
+    "cardTitle": {
+      "fontSize": "28px",
+      "fontWeight": "600",
+      "fontFamily": "handwritten, cursive",
+      "color": "#000000",
+      "textAlign": "center",
+      "marginBottom": "8px"
+    },
+    "cardSubtitle": {
+      "fontSize": "20px",
+      "fontWeight": "400",
+      "fontFamily": "handwritten, cursive",
+      "color": "#333333",
+      "textAlign": "center"
+    },
+    "socialIconLabel": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "color": "#000000"
+    }
+  },
+  "components": {
+    "profileHeader": {
+      "structure": "stacked",
+      "elements": {
+        "topNav": {
+          "position": "absolute",
+          "top": "24px",
+          "left": "24px",
+          "right": "24px",
+          "display": "flex",
+          "justifyContent": "space-between",
+          "items": [
+            {
+              "type": "icon-button",
+              "icon": "asterisk",
+              "size": "56px",
+              "background": "rgba(255, 255, 255, 0.9)",
+              "borderRadius": "50%",
+              "position": "left"
+            },
+            {
+              "type": "icon-button",
+              "icon": "bell",
+              "size": "56px",
+              "background": "rgba(255, 255, 255, 0.9)",
+              "borderRadius": "50%",
+              "position": "center-right"
+            },
+            {
+              "type": "icon-button",
+              "icon": "share",
+              "size": "56px",
+              "background": "rgba(255, 255, 255, 0.9)",
+              "borderRadius": "50%",
+              "position": "right"
+            }
+          ]
+        },
+        "avatar": {
+          "size": "120px",
+          "borderRadius": "50%",
+          "border": "4px solid rgba(255, 255, 255, 0.9)",
+          "marginBottom": "20px",
+          "position": "center",
+          "marginTop": "100px"
+        },
+        "name": {
+          "component": "profileName"
+        },
+        "socialIcons": {
+          "display": "flex",
+          "justifyContent": "center",
+          "gap": "24px",
+          "marginBottom": "32px",
+          "iconSize": "48px",
+          "iconColor": "#000000",
+          "icons": [
+            "email",
+            "x-twitter",
+            "instagram",
+            "patreon",
+            "discord",
+            "threads"
+          ]
+        },
+        "contactEmail": {
+          "component": "email"
+        }
+      }
+    },
+    "linkCard": {
+      "variants": [
+        {
+          "type": "image-showcase-card",
+          "name": "Large Image Card",
+          "structure": {
+            "display": "block",
+            "background": "rgba(255, 255, 255, 0.95)",
+            "borderRadius": "16px",
+            "padding": "20px",
+            "backdropFilter": "blur(20px)",
+            "transition": "all 0.3s ease",
+            "cursor": "pointer"
+          },
+          "content": {
+            "imageGrid": {
+              "display": "grid",
+              "aspectRatio": "16:9",
+              "borderRadius": "12px",
+              "overflow": "hidden",
+              "marginBottom": "16px",
+              "objectFit": "cover"
+            },
+            "title": {
+              "component": "cardTitle"
+            },
+            "subtitle": {
+              "component": "cardSubtitle"
+            }
+          },
+          "moreButton": {
+            "position": "absolute",
+            "right": "20px",
+            "top": "50%",
+            "transform": "translateY(-50%)",
+            "icon": "three-dots-vertical",
+            "size": "24px",
+            "color": "#666666"
+          }
+        },
+        {
+          "type": "simple-link-card",
+          "name": "Icon + Text Card",
+          "structure": {
+            "display": "flex",
+            "alignItems": "center",
+            "background": "rgba(255, 255, 255, 0.95)",
+            "borderRadius": "16px",
+            "padding": "24px",
+            "backdropFilter": "blur(20px)",
+            "transition": "all 0.3s ease",
+            "cursor": "pointer",
+            "gap": "20px"
+          },
+          "content": {
+            "icon": {
+              "size": "56px",
+              "borderRadius": "50%",
+              "background": "#000000",
+              "color": "#ffffff",
+              "flexShrink": "0"
+            },
+            "text": {
+              "flex": "1",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "fontFamily": "handwritten, cursive",
+              "color": "#000000",
+              "textAlign": "center"
+            }
+          },
+          "moreButton": {
+            "position": "absolute",
+            "right": "20px",
+            "icon": "three-dots-vertical",
+            "size": "24px",
+            "color": "#666666"
+          }
+        }
+      ],
+      "interactions": {
+        "hover": {
+          "transform": "translateY(-4px)",
+          "shadow": "0 8px 24px rgba(0, 0, 0, 0.15)",
+          "background": "rgba(255, 255, 255, 1)"
+        },
+        "active": {
+          "transform": "translateY(-2px)"
+        }
+      }
+    }
+  },
+  "animations": {
+    "cardHover": {
+      "duration": "300ms",
+      "timingFunction": "ease-out"
+    },
+    "pageLoad": {
+      "type": "fade-in-up",
+      "duration": "600ms",
+      "stagger": "100ms"
+    }
+  },
+  "responsive": {
+    "mobile": {
+      "breakpoint": "640px",
+      "adjustments": {
+        "profileName": {
+          "fontSize": "36px"
+        },
+        "email": {
+          "fontSize": "18px"
+        },
+        "cardTitle": {
+          "fontSize": "22px"
+        },
+        "socialIcons": {
+          "iconSize": "40px",
+          "gap": "16px"
+        },
+        "layout": {
+          "padding": "16px"
+        }
+      }
+    },
+    "tablet": {
+      "breakpoint": "1024px",
+      "adjustments": {
+        "layout": {
+          "maxWidth": "600px"
+        }
+      }
+    }
+  },
+  "contentStructure": {
+    "sections": [
+      {
+        "id": "header",
+        "component": "profileHeader",
+        "order": 1
+      },
+      {
+        "id": "links",
+        "type": "link-collection",
+        "order": 2,
+        "items": [
+          {
+            "type": "image-showcase-card",
+            "hasImage": true,
+            "hasTitle": true,
+            "hasSubtitle": true,
+            "imageLayout": "full-width"
+          },
+          {
+            "type": "image-showcase-card",
+            "hasImage": true,
+            "imageLayout": "grid",
+            "hasTitle": true,
+            "hasSubtitle": false
+          },
+          {
+            "type": "image-showcase-card",
+            "hasImage": true,
+            "imageLayout": "full-width",
+            "hasTitle": true,
+            "hasSubtitle": false
+          },
+          {
+            "type": "simple-link-card",
+            "hasIcon": true,
+            "hasTitle": true
+          },
+          {
+            "type": "simple-link-card",
+            "hasIcon": true,
+            "hasTitle": true
+          }
+        ]
+      }
+    ]
+  },
+  "designPrinciples": {
+    "visual": [
+      "Use backdrop blur effects for glassmorphism aesthetic",
+      "Maintain consistent border radius (16px for cards)",
+      "Apply subtle shadows with transparency",
+      "Use handwritten/cursive fonts for personalized feel",
+      "Implement smooth hover animations",
+      "Keep high contrast between text and background"
+    ],
+    "ux": [
+      "Cards should be clearly clickable with hover feedback",
+      "Maintain adequate spacing between elements",
+      "Ensure touch targets are at least 48x48px",
+      "Use consistent padding across all cards",
+      "Implement staggered animations for visual interest"
+    ],
+    "accessibility": [
+      "Ensure minimum 4.5:1 contrast ratio for text",
+      "Provide focus indicators for keyboard navigation",
+      "Include alt text for all images",
+      "Support reduced motion preferences",
+      "Ensure tap targets meet minimum size requirements"
+    ]
+  },
+  "technicalImplementation": {
+    "recommended": {
+      "framework": "React, Vue, or vanilla JavaScript",
+      "styling": "CSS-in-JS, Tailwind, or CSS Modules",
+      "animations": "Framer Motion, GSAP, or CSS transitions",
+      "state": "useState/Context API for simple state"
+    },
+    "cssProperties": {
+      "backdropFilter": "blur(20px)",
+      "webkitBackdropFilter": "blur(20px)",
+      "transition": "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+      "boxShadow": "0 2px 12px rgba(0, 0, 0, 0.08)"
+    }
+  }
+}
+

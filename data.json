@@ -1,0 +1,127 @@
+{
+  "username": "USKA.TG",
+  "email": "uskacool@gmail.com",
+  "avatar": "images/profilepicture.jpg",
+  "backgroundImage": "images/backgroundv2.jpg",
+  "theme": "light",
+  "customization": {
+    "fontFamily": "handwritten",
+    "accentColor": "#0066ff"
+  },
+  "socialLinks": [
+    {
+      "platform": "email",
+      "url": "mailto:uskacool@gmail.com",
+      "displayInHeader": true
+    },
+    {
+      "platform": "instagram",
+      "url": "https://instagram.com/uska.tg",
+      "displayInHeader": true
+    },
+    {
+      "platform": "portfolio",
+      "url": "#",
+      "displayInHeader": true
+    },
+    {
+      "platform": "youtube",
+      "url": "https://www.youtube.com/@uska_tg",
+      "displayInHeader": true
+    },
+    {
+      "platform": "tiktok",
+      "url": "https://tiktok.com/@uska.tg",
+      "displayInHeader": true
+    }
+  ],
+  "links": [
+    {
+      "id": "instagram-card",
+      "type": "image-showcase",
+      "title": "Instagram",
+      "subtitle": "",
+      "url": "https://instagram.com/uska.tg",
+      "thumbnail": "images/banner.JPG",
+      "priority": 1,
+      "enabled": true,
+      "analytics": {
+        "trackClicks": true
+      }
+    },
+    {
+      "id": "discord-server",
+      "type": "image-showcase",
+      "title": "Discord | 病監院收容所",
+      "subtitle": "Discord Server • Free to join",
+      "url": "https://discord.gg/invite",
+      "thumbnail": "https://via.placeholder.com/1200x630/764ba2/ffffff?text=Discord+Server",
+      "priority": 2,
+      "enabled": false,
+      "analytics": {
+        "trackClicks": true
+      }
+    },
+    {
+      "id": "patreon-page",
+      "type": "image-showcase",
+      "title": "Patreon | Pay床 創作幕後花絮",
+      "subtitle": "",
+      "url": "https://patreon.com/manfung",
+      "imageGallery": [
+        "https://via.placeholder.com/800x800/667eea/ffffff?text=Patreon+1",
+        "https://via.placeholder.com/800x800/764ba2/ffffff?text=Patreon+2"
+      ],
+      "priority": 3,
+      "enabled": false,
+      "analytics": {
+        "trackClicks": true
+      }
+    },
+    {
+      "id": "portfolio",
+      "type": "image-showcase",
+      "title": "Portfolio",
+      "subtitle": "",
+      "url": "#",
+      "imageGallery": [
+        "images/portfolio1.jpg",
+        "images/portfolio2.jpg",
+        "images/portfolio3.jpg",
+        "images/portfolio4.jpg",
+        "images/portfolio5.jpg",
+        "images/portfolio6.jpg"
+      ],
+      "priority": 2,
+      "enabled": true,
+      "analytics": {
+        "trackClicks": true
+      }
+    },
+    {
+      "id": "youtube",
+      "type": "simple-link",
+      "title": "YouTube",
+      "url": "https://www.youtube.com/@uska_tg",
+      "icon": "youtube",
+      "priority": 3,
+      "enabled": true,
+      "analytics": {
+        "trackClicks": true
+      }
+    },
+    {
+      "id": "tiktok",
+      "type": "simple-link",
+      "title": "TikTok",
+      "url": "https://tiktok.com/@uska.tg",
+      "icon": "tiktok",
+      "priority": 4,
+      "enabled": true,
+      "analytics": {
+        "trackClicks": true
+      }
+    }
+  ]
+}
+

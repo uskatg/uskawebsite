@@ -1,0 +1,300 @@
+{
+  "schema": {
+    "version": "1.0.0",
+    "description": "Profile data schema for Linktree-style pages"
+  },
+  "profile": {
+    "username": {
+      "type": "string",
+      "required": true,
+      "maxLength": 30,
+      "example": "MANFUNG"
+    },
+    "avatar": {
+      "type": "string",
+      "format": "url",
+      "required": true,
+      "description": "Profile picture URL"
+    },
+    "email": {
+      "type": "string",
+      "format": "email",
+      "required": false,
+      "display": "prominent",
+      "example": "manfungstudio@gmail.com"
+    },
+    "backgroundImage": {
+      "type": "string",
+      "format": "url",
+      "required": false,
+      "description": "Background image for blur effect"
+    },
+    "theme": {
+      "type": "string",
+      "enum": ["light", "dark", "auto"],
+      "default": "light"
+    },
+    "customization": {
+      "fontFamily": {
+        "type": "string",
+        "default": "handwritten",
+        "options": ["handwritten", "modern", "classic", "custom"]
+      },
+      "accentColor": {
+        "type": "string",
+        "format": "hex",
+        "default": "#0066ff"
+      }
+    }
+  },
+  "socialLinks": {
+    "type": "array",
+    "maxItems": 10,
+    "items": {
+      "platform": {
+        "type": "string",
+        "enum": [
+          "email",
+          "twitter",
+          "x",
+          "instagram",
+          "facebook",
+          "patreon",
+          "discord",
+          "threads",
+          "youtube",
+          "tiktok",
+          "linkedin",
+          "github",
+          "custom"
+        ]
+      },
+      "url": {
+        "type": "string",
+        "format": "url"
+      },
+      "displayInHeader": {
+        "type": "boolean",
+        "default": true,
+        "description": "Whether to show in the header icon row"
+      }
+    },
+    "example": [
+      {
+        "platform": "email",
+        "url": "mailto:manfungstudio@gmail.com",
+        "displayInHeader": true
+      },
+      {
+        "platform": "x",
+        "url": "https://twitter.com/username",
+        "displayInHeader": true
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com/username",
+        "displayInHeader": true
+      }
+    ]
+  },
+  "links": {
+    "type": "array",
+    "items": {
+      "id": {
+        "type": "string",
+        "required": true,
+        "unique": true
+      },
+      "type": {
+        "type": "string",
+        "enum": [
+          "simple-link",
+          "image-showcase",
+          "social-embed",
+          "video-preview",
+          "custom"
+        ],
+        "required": true
+      },
+      "title": {
+        "type": "string",
+        "required": true,
+        "maxLength": 100
+      },
+      "subtitle": {
+        "type": "string",
+        "required": false,
+        "maxLength": 200
+      },
+      "url": {
+        "type": "string",
+        "format": "url",
+        "required": true
+      },
+      "icon": {
+        "type": "string",
+        "required": false,
+        "description": "Icon name or URL for custom icon"
+      },
+      "thumbnail": {
+        "type": "string",
+        "format": "url",
+        "required": false,
+        "description": "Main image for the card"
+      },
+      "imageGallery": {
+        "type": "array",
+        "items": {
+          "type": "string",
+          "format": "url"
+        },
+        "maxItems": 6,
+        "description": "Multiple images for grid layout"
+      },
+      "priority": {
+        "type": "number",
+        "description": "Sort order (lower number = higher priority)"
+      },
+      "enabled": {
+        "type": "boolean",
+        "default": true
+      },
+      "analytics": {
+        "trackClicks": {
+          "type": "boolean",
+          "default": true
+        },
+        "customEvent": {
+          "type": "string"
+        }
+      }
+    }
+  },
+  "exampleProfile": {
+    "username": "MANFUNG",
+    "email": "manfungstudio@gmail.com",
+    "avatar": "/images/avatar.jpg",
+    "backgroundImage": "/images/background-blur.jpg",
+    "theme": "light",
+    "customization": {
+      "fontFamily": "handwritten",
+      "accentColor": "#0066ff"
+    },
+    "socialLinks": [
+      {
+        "platform": "email",
+        "url": "mailto:manfungstudio@gmail.com",
+        "displayInHeader": true
+      },
+      {
+        "platform": "x",
+        "url": "https://twitter.com/manfung",
+        "displayInHeader": true
+      },
+      {
+        "platform": "instagram",
+        "url": "https://instagram.com/manfung",
+        "displayInHeader": true
+      },
+      {
+        "platform": "patreon",
+        "url": "https://patreon.com/manfung",
+        "displayInHeader": true
+      },
+      {
+        "platform": "discord",
+        "url": "https://discord.gg/manfung",
+        "displayInHeader": true
+      },
+      {
+        "platform": "threads",
+        "url": "https://threads.net/@manfung",
+        "displayInHeader": true
+      }
+    ],
+    "links": [
+      {
+        "id": "discord-server",
+        "type": "image-showcase",
+        "title": "Discord | 病監院收容所",
+        "subtitle": "Discord Server • Free to join",
+        "url": "https://discord.gg/invite",
+        "thumbnail": "/images/discord-preview.jpg",
+        "priority": 1,
+        "enabled": true
+      },
+      {
+        "id": "patreon-page",
+        "type": "image-showcase",
+        "title": "Patreon | Pay床 創作幕後花絮",
+        "url": "https://patreon.com/manfung",
+        "imageGallery": [
+          "/images/patreon1.jpg",
+          "/images/patreon2.jpg"
+        ],
+        "priority": 2,
+        "enabled": true
+      },
+      {
+        "id": "online-store",
+        "type": "image-showcase",
+        "title": "Oline Store | 網店",
+        "url": "https://store.example.com",
+        "imageGallery": [
+          "/images/store1.jpg",
+          "/images/store2.jpg",
+          "/images/store3.jpg"
+        ],
+        "priority": 3,
+        "enabled": true
+      },
+      {
+        "id": "instagram",
+        "type": "image-showcase",
+        "title": "Instagram",
+        "url": "https://instagram.com/manfung",
+        "thumbnail": "/images/instagram-preview.jpg",
+        "priority": 4,
+        "enabled": true
+      },
+      {
+        "id": "twitter",
+        "type": "simple-link",
+        "title": "X",
+        "url": "https://twitter.com/manfung",
+        "icon": "x-twitter",
+        "priority": 5,
+        "enabled": true
+      },
+      {
+        "id": "facebook",
+        "type": "simple-link",
+        "title": "Facebook",
+        "url": "https://facebook.com/manfung",
+        "icon": "facebook",
+        "priority": 6,
+        "enabled": true
+      }
+    ]
+  },
+  "validationRules": {
+    "username": {
+      "pattern": "^[a-zA-Z0-9_-]{1,30}$",
+      "errorMessage": "Username must be 1-30 characters, alphanumeric with dashes/underscores"
+    },
+    "links": {
+      "minItems": 1,
+      "maxItems": 50
+    },
+    "images": {
+      "maxFileSize": "5MB",
+      "acceptedFormats": ["jpg", "jpeg", "png", "webp", "gif"],
+      "recommendedDimensions": {
+        "avatar": "400x400",
+        "thumbnail": "1200x630",
+        "background": "1920x1080"
+      }
+    }
+  }
+}
+
