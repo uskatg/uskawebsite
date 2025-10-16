@@ -77,7 +77,7 @@ const profileData = {
         {
             id: "portfolio",
             type: "image-showcase",
-            title: "Portfolio",
+            title: "Website",
             subtitle: "",
             url: "https://uska.app/portfolio",
             imageGallery: [
