@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Art Portfolio | Gallery</title>
+    <link rel="stylesheet" href="portfolio-styles.css">
+</head>
+<body>
+    <!-- Fixed Header -->
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <img src="images/portfolioWebsitelogoname.jpg.jpg" alt="USKA.TG Logo">
+            </div>
+            <nav class="nav-icons">
+                <button class="icon-btn hamburger-btn" aria-label="Menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+                <button class="icon-btn search-btn" aria-label="Search">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <path d="m21 21-4.35-4.35"></path>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hamburger Menu Overlay -->
+    <div class="menu-overlay">
+        <div class="menu-header">
+            <h2 class="menu-title">Menu</h2>
+            <button class="close-menu" aria-label="Close menu">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="menu-auth">
+            <button class="auth-btn">Register</button>
+            <div class="auth-divider"></div>
+            <button class="auth-btn">Log in</button>
+        </div>
+        
+        <nav class="menu-nav">
+            <a href="https://uska.app/portfolio" class="menu-link">Portfolio</a>
+            <a href="#commissions" class="menu-link">Commissions</a>
+            <a href="#conventions" class="menu-link">Conventions</a>
+            <a href="#tutorials" class="menu-link">Tutorials - Artly</a>
+            <a href="#course" class="menu-link">Course</a>
+        </nav>
+    </div>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#home">Home</a>
+        <span class="separator">/</span>
+        <span class="current">@USKA.TG</span>
+    </div>
+
+    <!-- Hero Carousel -->
+    <section class="hero-carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide active">
+                <div class="banner-slide">
+                    <img src="images/portfolioWebsitebanner1.jpg" alt="Commission Sheet" class="banner-image">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="banner-slide">
+                    <img src="images/portfolioWebsitebanner2.jpg" alt="Art Tutorials" class="banner-image">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="banner-slide">
+                    <img src="images/portfolioWebsitebanner3.jpg" alt="Art Station" class="banner-image">
+                </div>
+            </div>
+            <div class="carousel-slide">
+                <div class="banner-slide">
+                    <img src="images/portfolioWebsitebanner4.jpg" alt="Convention 2025" class="banner-image">
+                </div>
+            </div>
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Header -->
+    <section class="section-header">
+        <h2 class="section-title">@USKA.TG</h2>
+        <div class="divider"></div>
+    </section>
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+        <button class="filter-toggle">
+            <span>FILTERS</span>
+            <svg class="chevron-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+        </button>
+        <div class="filter-options">
+            <button class="filter-btn active" data-filter="all">All Artwork</button>
+            <button class="filter-btn" data-filter="character-design">Character Design</button>
+            <button class="filter-btn" data-filter="fanart">Fanart Illustrations</button>
+            <button class="filter-btn" data-filter="commissions">Commissions</button>
+        </div>
+    </div>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+        <article class="artwork-card" data-artwork="1" data-category="fanart">
+            <div class="image-container">
+                <div class="decorative-frame">
+                    <svg class="ornament-corner top-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 0 L80 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M60 0 Q80 20 80 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner top-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 0 L0 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 0 Q0 20 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 80 L80 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 80 L0 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 80 Q0 60 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <img src="images/portfolio1.jpg" alt="Arcane Illustration - Jinx & Vi" class="artwork-image">
+                    <div class="watermark">GALLERY</div>
+                </div>
+            </div>
+            <div class="artwork-metadata">
+                <p class="artist-label">USKA.TG</p>
+                <h3 class="artwork-title">Arcane Illustration - Jinx & Vi</h3>
+            </div>
+        </article>
+
+        <article class="artwork-card" data-artwork="2" data-category="fanart">
+            <div class="image-container">
+                <div class="decorative-frame">
+                    <svg class="ornament-corner top-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 0 L80 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M60 0 Q80 20 80 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner top-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 0 L0 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 0 Q0 20 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 80 L80 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 80 L0 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 80 Q0 60 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <img src="images/portfolio2.jpg" alt="Imbibitor Lunae Illustration - Honkai Star Rail - " class="artwork-image">
+                    <div class="watermark">GALLERY</div>
+                </div>
+            </div>
+            <div class="artwork-metadata">
+                <p class="artist-label">USKA.TG</p>
+                <h3 class="artwork-title"> Honkai Star Rail - Imbibitor Lunae</h3>
+            </div>
+        </article>
+
+        <article class="artwork-card" data-artwork="3" data-category="fanart">
+            <div class="image-container">
+                <div class="decorative-frame">
+                    <svg class="ornament-corner top-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 0 L80 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M60 0 Q80 20 80 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner top-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 0 L0 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 0 Q0 20 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 80 L80 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 80 L0 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 80 Q0 60 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <img src="images/portfolio3.jpg" alt="Kira - Death Note" class="artwork-image">
+                    <div class="watermark">GALLERY</div>
+                </div>
+            </div>
+            <div class="artwork-metadata">
+                <p class="artist-label">USKA.TG</p>
+                <h3 class="artwork-title">Death Note - Kira</h3>
+            </div>
+        </article>
+
+        <article class="artwork-card" data-artwork="4" data-category="character-design">
+            <div class="image-container">
+                <div class="decorative-frame">
+                    <svg class="ornament-corner top-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 0 L80 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M60 0 Q80 20 80 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner top-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 0 L0 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 0 Q0 20 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 80 L80 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 80 L0 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 80 Q0 60 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <img src="images/portfolio4.jpg" alt="Character Design Series - Year of Dragon" class="artwork-image">
+                    <div class="watermark">GALLERY</div>
+                </div>
+            </div>
+            <div class="artwork-metadata">
+                <p class="artist-label">USKA.TG</p>
+                <h3 class="artwork-title">Character Design Series - Year of Dragon</h3>
+            </div>
+        </article>
+
+        <article class="artwork-card" data-artwork="5" data-category="character-design">
+            <div class="image-container">
+                <div class="decorative-frame">
+                    <svg class="ornament-corner top-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 0 L80 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M60 0 Q80 20 80 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner top-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 0 L0 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 0 Q0 20 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 80 L80 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 80 L0 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 80 Q0 60 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <img src="images/portfolio5.jpg" alt="Character Design Series - Furong Town" class="artwork-image">
+                    <div class="watermark">GALLERY</div>
+                </div>
+            </div>
+            <div class="artwork-metadata">
+                <p class="artist-label">USKA.TG</p>
+                <h3 class="artwork-title">Character Design Series - Furong Town</h3>
+            </div>
+        </article>
+
+        <article class="artwork-card" data-artwork="6" data-category="fanart">
+            <div class="image-container">
+                <div class="decorative-frame">
+                    <svg class="ornament-corner top-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 0 L80 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M60 0 Q80 20 80 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner top-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 0 L0 80 M0 0 L80 0" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 0 Q0 20 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-left" viewBox="0 0 80 80" fill="none">
+                        <path d="M80 80 L80 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                    </svg>
+                    <svg class="ornament-corner bottom-right" viewBox="0 0 80 80" fill="none">
+                        <path d="M0 80 L0 0 M0 80 L80 80" stroke="#2d5bff" stroke-width="6" opacity="0.7"/>
+                        <path d="M20 80 Q0 60 0 40" stroke="#2d5bff" stroke-width="4" opacity="0.5"/>
+                    </svg>
+                    <img src="images/portfolio6.jpg" alt="Abstract Art - Hikaru" class="artwork-image">
+                    <div class="watermark">GALLERY</div>
+                </div>
+            </div>
+            <div class="artwork-metadata">
+                <p class="artist-label">USKA.TG</p>
+                <h3 class="artwork-title">Abstract Art - Hikaru</h3>
+            </div>
+        </article>
+    </section>
+
+    <!-- Image Zoom Modal -->
+    <div class="zoom-modal">
+        <button class="close-zoom" aria-label="Close zoom">
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="18" y1="6" x2="6" y2="18"></line>
+                <line x1="6" y1="6" x2="18" y2="18"></line>
+            </svg>
+        </button>
+        <div class="zoom-content">
+            <img src="" alt="Zoomed artwork" class="zoomed-image">
+            <div class="zoom-info">
+                <p class="zoom-artist"></p>
+                <h3 class="zoom-title"></h3>
+            </div>
+        </div>
+    </div>
+
+    <script src="portfolio-script.js"></script>
+</body>
+</html>
+

@@ -1,0 +1,826 @@
+{
+  "metadata": {
+    "name": "Art Portfolio Gallery Design System",
+    "version": "1.0.0",
+    "description": "Design system for creating gallery-style portfolio websites for illustrators and artists, inspired by 2AM Museum collection pages",
+    "reference": "https://2am-museum.com/collections/manfung",
+    "designStyle": "Modern art gallery with decorative ornamental borders, high contrast dark theme, emphasis on visual storytelling"
+  },
+  "layout": {
+    "type": "full-width-gallery",
+    "structure": "header-hero-content-footer",
+    "maxWidth": "1440px",
+    "contentMaxWidth": "1200px",
+    "alignment": "center",
+    "spacing": {
+      "sectionGap": "60px",
+      "gridGap": "24px",
+      "containerPadding": "40px",
+      "mobilePadding": "20px"
+    },
+    "grid": {
+      "desktop": {
+        "columns": 2,
+        "gap": "24px",
+        "aspectRatio": "4:5"
+      },
+      "tablet": {
+        "columns": 2,
+        "gap": "16px"
+      },
+      "mobile": {
+        "columns": 1,
+        "gap": "20px"
+      }
+    }
+  },
+  "colorScheme": {
+    "theme": "dark",
+    "primary": {
+      "background": "#000000",
+      "backgroundAlt": "#0a0a0a",
+      "text": "#ffffff",
+      "textSecondary": "#e0e0e0"
+    },
+    "accent": {
+      "primary": "#2d5bff",
+      "secondary": "#1a3d99",
+      "decorative": "#3366ff",
+      "ornamentalBlue": "#0047ab"
+    },
+    "surface": {
+      "card": "#1a1a1a",
+      "cardHover": "#222222",
+      "overlay": "rgba(0, 0, 0, 0.85)"
+    },
+    "borders": {
+      "subtle": "rgba(255, 255, 255, 0.1)",
+      "decorative": "#2d5bff",
+      "ornamental": "rgba(45, 91, 255, 0.6)"
+    },
+    "neutral": {
+      "white": "#ffffff",
+      "lightGray": "#e8e8e8",
+      "mediumGray": "#999999",
+      "darkGray": "#333333",
+      "black": "#000000"
+    }
+  },
+  "typography": {
+    "fontFamilies": {
+      "primary": "'Inter', 'Helvetica Neue', -apple-system, sans-serif",
+      "heading": "'Inter', 'Helvetica Neue', sans-serif",
+      "display": "'Inter', sans-serif"
+    },
+    "siteTitle": {
+      "fontSize": "24px",
+      "fontWeight": "800",
+      "letterSpacing": "0.05em",
+      "textTransform": "uppercase",
+      "color": "#000000",
+      "lineHeight": "1.2"
+    },
+    "heroTitle": {
+      "fontSize": "64px",
+      "fontWeight": "900",
+      "letterSpacing": "-0.02em",
+      "color": "#ffffff",
+      "lineHeight": "1.1",
+      "textTransform": "none"
+    },
+    "sectionTitle": {
+      "fontSize": "48px",
+      "fontWeight": "900",
+      "letterSpacing": "-0.01em",
+      "color": "#ffffff",
+      "lineHeight": "1.2",
+      "marginBottom": "40px"
+    },
+    "artistName": {
+      "fontSize": "14px",
+      "fontWeight": "600",
+      "letterSpacing": "0.02em",
+      "textTransform": "uppercase",
+      "color": "#ffffff",
+      "lineHeight": "1.4"
+    },
+    "artworkTitle": {
+      "fontSize": "20px",
+      "fontWeight": "700",
+      "letterSpacing": "0",
+      "color": "#ffffff",
+      "lineHeight": "1.4",
+      "marginTop": "12px"
+    },
+    "breadcrumb": {
+      "fontSize": "16px",
+      "fontWeight": "500",
+      "color": "#000000",
+      "lineHeight": "1.5"
+    },
+    "filterLabel": {
+      "fontSize": "18px",
+      "fontWeight": "700",
+      "letterSpacing": "0.05em",
+      "textTransform": "uppercase",
+      "color": "#ffffff",
+      "lineHeight": "1.5"
+    },
+    "body": {
+      "fontSize": "16px",
+      "fontWeight": "400",
+      "color": "#e0e0e0",
+      "lineHeight": "1.6"
+    }
+  },
+  "components": {
+    "header": {
+      "type": "sticky-navigation",
+      "position": "fixed",
+      "top": "0",
+      "width": "100%",
+      "zIndex": "1000",
+      "background": "rgba(255, 255, 255, 0.98)",
+      "backdropFilter": "blur(12px)",
+      "borderBottom": "1px solid rgba(0, 0, 0, 0.08)",
+      "height": "80px",
+      "structure": {
+        "display": "flex",
+        "justifyContent": "space-between",
+        "alignItems": "center",
+        "padding": "0 40px"
+      },
+      "elements": {
+        "logo": {
+          "type": "text-logo",
+          "position": "left",
+          "fontSize": "24px",
+          "fontWeight": "800",
+          "textTransform": "uppercase",
+          "letterSpacing": "0.05em",
+          "color": "#000000"
+        },
+        "navigation": {
+          "position": "right",
+          "display": "flex",
+          "gap": "24px",
+          "alignItems": "center",
+          "items": [
+            {
+              "type": "hamburger-menu",
+              "icon": "menu",
+              "size": "24px",
+              "color": "#000000"
+            },
+            {
+              "type": "search-button",
+              "icon": "search",
+              "size": "24px",
+              "color": "#000000"
+            },
+            {
+              "type": "cart-indicator",
+              "icon": "shopping-cart",
+              "size": "24px",
+              "color": "#000000",
+              "showCount": false
+            }
+          ]
+        }
+      },
+      "mobile": {
+        "padding": "0 20px",
+        "height": "64px"
+      }
+    },
+    "breadcrumb": {
+      "marginTop": "80px",
+      "padding": "24px 40px",
+      "background": "#ffffff",
+      "structure": {
+        "display": "flex",
+        "alignItems": "center",
+        "gap": "12px"
+      },
+      "separator": {
+        "character": "/",
+        "color": "#999999",
+        "margin": "0 8px"
+      },
+      "link": {
+        "color": "#000000",
+        "fontWeight": "500",
+        "textDecoration": "none",
+        "hoverColor": "#2d5bff"
+      },
+      "current": {
+        "color": "#666666",
+        "fontWeight": "600"
+      }
+    },
+    "heroCarousel": {
+      "type": "full-width-slider",
+      "background": "#000000",
+      "height": {
+        "desktop": "600px",
+        "tablet": "500px",
+        "mobile": "400px"
+      },
+      "structure": {
+        "display": "flex",
+        "position": "relative",
+        "overflow": "hidden"
+      },
+      "slides": {
+        "layout": "flexible",
+        "variants": [
+          {
+            "type": "single-large-image",
+            "width": "60%",
+            "aspectRatio": "4:5"
+          },
+          {
+            "type": "grid-showcase",
+            "columns": 2,
+            "rows": 2,
+            "width": "40%"
+          }
+        ]
+      },
+      "imageFrame": {
+        "border": "8px solid transparent",
+        "borderImage": "ornamental-pattern",
+        "borderImageColor": "#2d5bff",
+        "padding": "12px",
+        "background": "#000000"
+      },
+      "decorativePatterns": {
+        "style": "ornate-corners",
+        "color": "#2d5bff",
+        "opacity": "0.8",
+        "placement": [
+          "top-left",
+          "top-right",
+          "bottom-left",
+          "bottom-right"
+        ],
+        "design": "geometric-flowing-lines"
+      },
+      "navigation": {
+        "dots": {
+          "position": "bottom-center",
+          "margin": "20px",
+          "dotSize": "8px",
+          "dotColor": "rgba(255, 255, 255, 0.4)",
+          "activeDotColor": "#ffffff",
+          "gap": "8px"
+        },
+        "arrows": {
+          "show": false
+        }
+      },
+      "watermark": {
+        "type": "circular-logo",
+        "position": "center",
+        "opacity": "0.15",
+        "size": "120px",
+        "color": "#ffffff"
+      }
+    },
+    "sectionHeader": {
+      "background": "#000000",
+      "padding": "60px 40px 40px",
+      "structure": {
+        "title": {
+          "component": "sectionTitle",
+          "textAlign": "left"
+        },
+        "divider": {
+          "height": "2px",
+          "background": "rgba(255, 255, 255, 0.1)",
+          "width": "100%",
+          "marginTop": "20px"
+        }
+      }
+    },
+    "filterBar": {
+      "background": "#000000",
+      "padding": "20px 40px",
+      "borderBottom": "1px solid rgba(255, 255, 255, 0.1)",
+      "structure": {
+        "display": "flex",
+        "justifyContent": "space-between",
+        "alignItems": "center"
+      },
+      "filterToggle": {
+        "display": "flex",
+        "alignItems": "center",
+        "gap": "12px",
+        "cursor": "pointer",
+        "label": {
+          "component": "filterLabel"
+        },
+        "icon": {
+          "type": "chevron-down",
+          "size": "20px",
+          "color": "#ffffff"
+        }
+      }
+    },
+    "artworkCard": {
+      "variants": [
+        {
+          "type": "gallery-showcase",
+          "structure": {
+            "display": "block",
+            "position": "relative",
+            "background": "#000000",
+            "borderRadius": "0",
+            "overflow": "hidden",
+            "transition": "all 0.4s cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          "imageContainer": {
+            "position": "relative",
+            "aspectRatio": "4:5",
+            "overflow": "hidden",
+            "background": "#000000"
+          },
+          "image": {
+            "width": "100%",
+            "height": "100%",
+            "objectFit": "cover",
+            "display": "block",
+            "transition": "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)"
+          },
+          "decorativeFrame": {
+            "type": "ornamental-border",
+            "style": "blue-pattern",
+            "design": "flowing-geometric",
+            "position": "absolute",
+            "inset": "0",
+            "pointerEvents": "none",
+            "corners": [
+              {
+                "position": "top-left",
+                "size": "80px",
+                "pattern": "curved-lines"
+              },
+              {
+                "position": "top-right",
+                "size": "80px",
+                "pattern": "curved-lines"
+              },
+              {
+                "position": "bottom-left",
+                "size": "80px",
+                "pattern": "curved-lines"
+              },
+              {
+                "position": "bottom-right",
+                "size": "80px",
+                "pattern": "curved-lines"
+              }
+            ],
+            "border": {
+              "width": "6px",
+              "style": "solid",
+              "color": "#2d5bff",
+              "opacity": "0.7"
+            }
+          },
+          "watermark": {
+            "type": "centered-circular-logo",
+            "position": "absolute",
+            "top": "50%",
+            "left": "50%",
+            "transform": "translate(-50%, -50%)",
+            "size": "100px",
+            "opacity": "0.12",
+            "color": "#ffffff",
+            "text": "CIRCULAR TEXT PATTERN"
+          },
+          "metadata": {
+            "position": "below-image",
+            "padding": "16px 0",
+            "background": "transparent"
+          },
+          "artistLabel": {
+            "component": "artistName",
+            "marginBottom": "4px"
+          },
+          "title": {
+            "component": "artworkTitle"
+          }
+        },
+        {
+          "type": "grid-collection",
+          "structure": {
+            "display": "grid",
+            "gridTemplateColumns": "repeat(2, 1fr)",
+            "gridTemplateRows": "repeat(2, 1fr)",
+            "gap": "8px",
+            "aspectRatio": "4:5",
+            "background": "#000000",
+            "padding": "12px",
+            "position": "relative"
+          },
+          "gridItems": {
+            "count": 4,
+            "aspectRatio": "1:1",
+            "objectFit": "cover",
+            "borderRadius": "4px"
+          },
+          "outerFrame": {
+            "border": "6px solid #2d5bff",
+            "opacity": "0.7"
+          }
+        }
+      ],
+      "interactions": {
+        "hover": {
+          "image": {
+            "transform": "scale(1.05)"
+          },
+          "decorativeFrame": {
+            "opacity": "1",
+            "borderColor": "#3d6bff"
+          },
+          "cursor": "pointer"
+        },
+        "focus": {
+          "outline": "2px solid #2d5bff",
+          "outlineOffset": "4px"
+        }
+      }
+    },
+    "galleryGrid": {
+      "background": "#000000",
+      "padding": "40px",
+      "structure": {
+        "display": "grid",
+        "gridTemplateColumns": {
+          "desktop": "repeat(2, 1fr)",
+          "tablet": "repeat(2, 1fr)",
+          "mobile": "1fr"
+        },
+        "gap": "24px",
+        "maxWidth": "1200px",
+        "margin": "0 auto"
+      },
+      "loadMore": {
+        "type": "infinite-scroll",
+        "trigger": "intersection-observer",
+        "threshold": "200px"
+      }
+    }
+  },
+  "decorativeElements": {
+    "ornamentalBorders": {
+      "style": "geometric-flowing",
+      "description": "Blue decorative patterns with curved and angular geometric shapes that frame artwork",
+      "characteristics": [
+        "Flowing curves that connect corner elements",
+        "Geometric angular patterns mixed with organic curves",
+        "Symmetrical design across corners",
+        "Semi-transparent blue color (#2d5bff with 60-80% opacity)",
+        "Modern take on classical ornamental frames",
+        "Creates visual hierarchy and premium feel"
+      ],
+      "implementation": {
+        "method": "SVG or CSS pseudo-elements",
+        "layering": "Absolute positioned overlay",
+        "responsiveness": "Scale proportionally with container"
+      }
+    },
+    "watermarks": {
+      "type": "circular-logo-pattern",
+      "description": "Subtle centered circular logo or text pattern overlaid on images",
+      "properties": {
+        "opacity": "0.1-0.15",
+        "size": "80-120px",
+        "position": "center",
+        "color": "white",
+        "blendMode": "overlay or soft-light"
+      }
+    },
+    "patternDetails": {
+      "cornerOrnaments": {
+        "shape": "L-shaped with curves",
+        "thickness": "4-6px lines",
+        "style": "Art nouveau meets modern geometric",
+        "animation": "Subtle glow on hover (optional)"
+      },
+      "borderAccents": {
+        "placement": "Edges and corners of artwork frames",
+        "color": "Bright blue (#2d5bff)",
+        "style": "Continuous line with decorative breaks",
+        "weight": "Medium (4-6px)"
+      }
+    }
+  },
+  "animations": {
+    "imageHover": {
+      "type": "scale-transform",
+      "duration": "600ms",
+      "timingFunction": "cubic-bezier(0.4, 0, 0.2, 1)",
+      "scale": "1.05"
+    },
+    "cardHover": {
+      "duration": "400ms",
+      "timingFunction": "ease-out",
+      "properties": [
+        "transform",
+        "box-shadow",
+        "border-color"
+      ]
+    },
+    "pageLoad": {
+      "type": "staggered-fade-in",
+      "duration": "800ms",
+      "stagger": "120ms",
+      "elements": [
+        "hero",
+        "section-title",
+        "gallery-cards"
+      ]
+    },
+    "carouselTransition": {
+      "type": "slide",
+      "duration": "500ms",
+      "timingFunction": "ease-in-out",
+      "autoplay": false
+    },
+    "filterExpand": {
+      "type": "accordion",
+      "duration": "300ms",
+      "timingFunction": "ease"
+    }
+  },
+  "responsive": {
+    "breakpoints": {
+      "mobile": "320px-767px",
+      "tablet": "768px-1023px",
+      "desktop": "1024px+"
+    },
+    "mobile": {
+      "header": {
+        "height": "64px",
+        "padding": "0 20px"
+      },
+      "heroCarousel": {
+        "height": "400px",
+        "slides": "single-column"
+      },
+      "galleryGrid": {
+        "columns": 1,
+        "gap": "20px",
+        "padding": "20px"
+      },
+      "typography": {
+        "heroTitle": "36px",
+        "sectionTitle": "32px",
+        "artworkTitle": "18px"
+      },
+      "decorativeFrame": {
+        "cornerSize": "50px",
+        "borderWidth": "4px"
+      }
+    },
+    "tablet": {
+      "galleryGrid": {
+        "columns": 2,
+        "gap": "20px"
+      },
+      "heroCarousel": {
+        "height": "500px"
+      }
+    },
+    "desktop": {
+      "galleryGrid": {
+        "columns": 2,
+        "gap": "24px"
+      }
+    }
+  },
+  "contentStructure": {
+    "pageLayout": [
+      {
+        "section": "header",
+        "component": "header",
+        "order": 1,
+        "sticky": true
+      },
+      {
+        "section": "breadcrumb",
+        "component": "breadcrumb",
+        "order": 2,
+        "sticky": false
+      },
+      {
+        "section": "hero",
+        "component": "heroCarousel",
+        "order": 3,
+        "fullWidth": true
+      },
+      {
+        "section": "artist-section",
+        "component": "sectionHeader",
+        "order": 4,
+        "background": "dark"
+      },
+      {
+        "section": "filters",
+        "component": "filterBar",
+        "order": 5,
+        "collapsible": true
+      },
+      {
+        "section": "gallery",
+        "component": "galleryGrid",
+        "order": 6,
+        "infinite": true
+      }
+    ],
+    "artworkCardData": {
+      "required": [
+        "artistName",
+        "title",
+        "images"
+      ],
+      "optional": [
+        "description",
+        "year",
+        "medium",
+        "dimensions"
+      ],
+      "imageFormats": [
+        "single-image",
+        "image-grid-2x2",
+        "image-carousel"
+      ]
+    }
+  },
+  "visualEffects": {
+    "imageFraming": {
+      "primary": "ornamental-blue-border",
+      "variants": [
+        {
+          "type": "full-ornamental-frame",
+          "description": "Complete decorative frame with corner ornaments and border accents",
+          "use": "Featured or hero images"
+        },
+        {
+          "type": "corner-accents-only",
+          "description": "Minimal corner decorations without full border",
+          "use": "Grid items or thumbnails"
+        },
+        {
+          "type": "simple-border",
+          "description": "Clean border without ornamental elements",
+          "use": "Secondary content"
+        }
+      ]
+    },
+    "hoverStates": {
+      "imageZoom": {
+        "enabled": true,
+        "scale": "1.05",
+        "transition": "smooth"
+      },
+      "borderGlow": {
+        "enabled": true,
+        "color": "#3d6bff",
+        "intensity": "subtle"
+      },
+      "overlayDarken": {
+        "enabled": false
+      }
+    },
+    "backgroundEffects": {
+      "pageBackground": "#000000",
+      "gradients": {
+        "use": "minimal",
+        "type": "subtle-radial",
+        "colors": [
+          "#000000",
+          "#0a0a0a"
+        ]
+      }
+    }
+  },
+  "designPrinciples": {
+    "visual": [
+      "High contrast dark theme with pure black background (#000000)",
+      "Use bright blue (#2d5bff) for all decorative elements and accents",
+      "Ornamental frames should enhance, not overpower the artwork",
+      "Maintain generous whitespace (or blackspace) between gallery items",
+      "Images should be the primary focus - minimal UI chrome",
+      "Decorative patterns should be geometric with flowing curves",
+      "Watermarks should be subtle (10-15% opacity)",
+      "Typography should be bold and modern, high contrast against dark background"
+    ],
+    "layout": [
+      "Two-column grid on desktop for optimal artwork showcase",
+      "Full-width hero carousel to immediately showcase artwork",
+      "Consistent aspect ratios (4:5) for gallery uniformity",
+      "Breathing room between cards (24px minimum)",
+      "Fixed header for easy navigation",
+      "Breadcrumb navigation for context and hierarchy"
+    ],
+    "interaction": [
+      "Smooth zoom-in effect on hover to preview details",
+      "Subtle border glow on hover for interactive feedback",
+      "Click on card to view full artwork detail",
+      "Smooth scrolling and transitions throughout",
+      "Loading states for images and infinite scroll",
+      "Keyboard navigation support"
+    ],
+    "ux": [
+      "Fast image loading with progressive enhancement",
+      "Infinite scroll for continuous browsing experience",
+      "Filter system for content organization (collapsible)",
+      "Clear visual hierarchy: Hero → Section → Gallery",
+      "Mobile-first responsive design",
+      "Touch-friendly tap targets (minimum 48x48px)"
+    ],
+    "accessibility": [
+      "High contrast mode support (already high contrast)",
+      "Alt text for all artwork images",
+      "Keyboard navigation for all interactive elements",
+      "Focus indicators that respect the dark theme",
+      "Semantic HTML structure",
+      "Screen reader friendly labels",
+      "Reduced motion support for animations"
+    ],
+    "branding": [
+      "Premium art gallery aesthetic",
+      "Museum-quality presentation",
+      "Artist-centric showcase design",
+      "Professional yet artistic feel",
+      "Emphasize artwork over interface",
+      "Create sense of curation and quality"
+    ]
+  },
+  "technicalImplementation": {
+    "recommended": {
+      "framework": "React, Next.js, or Vue.js for dynamic gallery",
+      "imageOptimization": "Next.js Image or similar with lazy loading",
+      "styling": "CSS Modules, Styled Components, or Tailwind CSS",
+      "animations": "Framer Motion or GSAP for smooth interactions",
+      "carousel": "Swiper.js or custom implementation",
+      "infiniteScroll": "Intersection Observer API",
+      "state": "React Context or Zustand for filter and gallery state"
+    },
+    "cssProperties": {
+      "imageTransition": "transform 0.6s cubic-bezier(0.4, 0, 0.2, 1)",
+      "borderTransition": "all 0.4s ease-out",
+      "backdropFilter": "blur(12px)",
+      "objectFit": "cover",
+      "aspectRatio": "4 / 5"
+    },
+    "performance": {
+      "imageFormats": [
+        "WebP with JPEG fallback",
+        "Responsive srcset for different screen sizes",
+        "Lazy loading for below-the-fold images",
+        "Preload hero images"
+      ],
+      "optimization": [
+        "Code splitting by route",
+        "Compress and optimize all assets",
+        "Use CDN for image delivery",
+        "Implement virtual scrolling for large galleries"
+      ]
+    }
+  },
+  "exampleUseCases": {
+    "portfolioShowcase": {
+      "description": "Artist portfolio displaying illustrations, paintings, or digital art",
+      "features": [
+        "Hero carousel with best works",
+        "Gallery grid of all artworks",
+        "Ornamental frames for premium feel",
+        "Artist name and artwork titles"
+      ]
+    },
+    "collectionBrowser": {
+      "description": "Browse through curated art collections or series",
+      "features": [
+        "Filter by collection, year, or medium",
+        "Infinite scroll for continuous browsing",
+        "Grid and carousel layouts",
+        "Breadcrumb navigation for collections"
+      ]
+    },
+    "exhibitionSite": {
+      "description": "Virtual exhibition space for showcasing art",
+      "features": [
+        "Museum-quality presentation",
+        "High-resolution image support",
+        "Detailed artwork information",
+        "Professional aesthetic"
+      ]
+    }
+  }
+}
+
