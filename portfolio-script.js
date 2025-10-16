@@ -133,6 +133,46 @@ const carouselContainer = document.querySelector('.carousel-container');
 carouselContainer.addEventListener('mouseenter', stopAutoAdvance);
 carouselContainer.addEventListener('mouseleave', startAutoAdvance);
 
+// ==================== TOUCH SWIPE FOR MOBILE ====================
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+
+function handleSwipe() {
+    const swipeThreshold = 50; // Minimum distance for a swipe
+    const horizontalDistance = touchEndX - touchStartX;
+    const verticalDistance = Math.abs(touchEndY - touchStartY);
+    
+    // Only trigger swipe if horizontal movement is greater than vertical
+    if (Math.abs(horizontalDistance) > swipeThreshold && Math.abs(horizontalDistance) > verticalDistance) {
+        if (horizontalDistance > 0) {
+            // Swipe right - go to previous slide
+            currentSlide = currentSlide <= 0 ? carouselSlides.length - 1 : currentSlide - 1;
+            showSlide(currentSlide);
+        } else {
+            // Swipe left - go to next slide
+            currentSlide = (currentSlide + 1) % carouselSlides.length;
+            showSlide(currentSlide);
+        }
+        
+        // Reset auto-advance after manual swipe
+        stopAutoAdvance();
+        startAutoAdvance();
+    }
+}
+
+carouselContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+}, { passive: true });
+
+carouselContainer.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+}, { passive: true });
+
 // ==================== FILTER FUNCTIONALITY ====================
 const filterToggle = document.querySelector('.filter-toggle');
 const filterOptions = document.querySelector('.filter-options');

@@ -3,6 +3,22 @@
     {
       "source": "/portfolio",
       "destination": "/portfolio.html"
+    },
+    {
+      "source": "/commission",
+      "destination": "/commission.html"
+    },
+    {
+      "source": "/course",
+      "destination": "/course.html"
+    },
+    {
+      "source": "/artly",
+      "destination": "/artly.html"
+    },
+    {
+      "source": "/conventions",
+      "destination": "/conventions.html"
     }
   ],
   "cleanUrls": true,
