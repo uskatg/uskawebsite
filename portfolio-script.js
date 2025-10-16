@@ -89,18 +89,21 @@ document.addEventListener('keydown', (e) => {
 
 // ==================== CAROUSEL FUNCTIONALITY ====================
 const carouselSlides = document.querySelectorAll('.carousel-slide');
+const carouselWrapper = document.querySelector('.carousel-slides-wrapper');
 const dots = document.querySelectorAll('.dot');
 let currentSlide = 0;
 
 // Function to show specific slide
 function showSlide(index) {
-    carouselSlides.forEach((slide, i) => {
-        slide.classList.remove('active');
-        dots[i].classList.remove('active');
+    // Update dots
+    dots.forEach((dot, i) => {
+        dot.classList.remove('active');
     });
-
-    carouselSlides[index].classList.add('active');
     dots[index].classList.add('active');
+    
+    // Slide to the correct position
+    const offset = -index * 100;
+    carouselWrapper.style.transform = `translateX(${offset}%)`;
     currentSlide = index;
 }
 
@@ -138,8 +141,51 @@ let touchStartX = 0;
 let touchEndX = 0;
 let touchStartY = 0;
 let touchEndY = 0;
+let isDragging = false;
+let currentTranslate = 0;
+let prevTranslate = 0;
 
-function handleSwipe() {
+carouselContainer.addEventListener('touchstart', (e) => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    isDragging = true;
+    
+    // Disable transition during drag
+    carouselWrapper.style.transition = 'none';
+}, { passive: true });
+
+carouselContainer.addEventListener('touchmove', (e) => {
+    if (!isDragging) return;
+    
+    const currentX = e.touches[0].clientX;
+    const currentY = e.touches[0].clientY;
+    const diffX = currentX - touchStartX;
+    const diffY = Math.abs(currentY - touchStartY);
+    
+    // Only handle horizontal swipes
+    if (Math.abs(diffX) > diffY) {
+        e.preventDefault();
+        
+        // Calculate the current translate position
+        const containerWidth = carouselContainer.offsetWidth;
+        const dragPercent = (diffX / containerWidth) * 100;
+        currentTranslate = prevTranslate + dragPercent;
+        
+        // Apply the drag with some resistance at edges
+        carouselWrapper.style.transform = `translateX(${currentTranslate}%)`;
+    }
+}, { passive: false });
+
+carouselContainer.addEventListener('touchend', (e) => {
+    if (!isDragging) return;
+    isDragging = false;
+    
+    touchEndX = e.changedTouches[0].clientX;
+    touchEndY = e.changedTouches[0].clientY;
+    
+    // Re-enable transition
+    carouselWrapper.style.transition = 'transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)';
+    
     const swipeThreshold = 50; // Minimum distance for a swipe
     const horizontalDistance = touchEndX - touchStartX;
     const verticalDistance = Math.abs(touchEndY - touchStartY);
@@ -149,28 +195,21 @@ function handleSwipe() {
         if (horizontalDistance > 0) {
             // Swipe right - go to previous slide
             currentSlide = currentSlide <= 0 ? carouselSlides.length - 1 : currentSlide - 1;
-            showSlide(currentSlide);
         } else {
             // Swipe left - go to next slide
             currentSlide = (currentSlide + 1) % carouselSlides.length;
-            showSlide(currentSlide);
         }
+        
+        showSlide(currentSlide);
+        prevTranslate = -currentSlide * 100;
         
         // Reset auto-advance after manual swipe
         stopAutoAdvance();
         startAutoAdvance();
+    } else {
+        // Snap back to current slide if swipe was too short
+        showSlide(currentSlide);
     }
-}
-
-carouselContainer.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-    touchStartY = e.changedTouches[0].screenY;
-}, { passive: true });
-
-carouselContainer.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    touchEndY = e.changedTouches[0].screenY;
-    handleSwipe();
 }, { passive: true });
 
 // ==================== FILTER FUNCTIONALITY ====================
