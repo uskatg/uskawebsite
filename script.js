@@ -10,8 +10,8 @@
 const profileData = {
     username: "USKA.TG",
     email: "uskacool@gmail.com",
-    avatar: "images/profilepicture.jpg",
-    backgroundImage: "images/backgroundv2.jpg",
+    avatar: "images/optimized/profilepicture.jpg",
+    backgroundImage: "images/optimized/backgroundv2.jpg",
     theme: "light",
     socialLinks: [
         {
@@ -47,7 +47,7 @@ const profileData = {
             title: "Instagram",
             subtitle: "",
             url: "https://instagram.com/uska.tg",
-            thumbnail: "images/banner.JPG",
+            thumbnail: "images/optimized/banner.JPG",
             priority: 1,
             enabled: true
         },
@@ -81,12 +81,12 @@ const profileData = {
             subtitle: "",
             url: "https://uska.app/portfolio",
             imageGallery: [
-                "images/portfolio1.jpg",
-                "images/portfolio2.jpg",
-                "images/portfolio3.jpg",
-                "images/portfolio4.jpg",
-                "images/portfolio5.jpg",
-                "images/portfolio6.jpg"
+                "images/optimized/portfolio1.jpg",
+                "images/optimized/portfolio2.jpg",
+                "images/optimized/portfolio3.jpg",
+                "images/optimized/portfolio4.jpg",
+                "images/optimized/portfolio5.jpg",
+                "images/optimized/portfolio6.jpg"
             ],
             priority: 2,
             enabled: true

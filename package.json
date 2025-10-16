@@ -6,7 +6,8 @@
   "scripts": {
     "start": "npx serve .",
     "dev": "npx serve . -l 8000",
-    "preview": "python -m http.server 8000"
+    "preview": "python -m http.server 8000",
+    "optimize": "node optimize-images.js"
   },
   "keywords": [
     "linktree",
@@ -15,9 +16,11 @@
     "glassmorphism",
     "vanilla-javascript"
   ],
-  "author": "Your Name",
+  "author": "USKA.TG",
   "license": "MIT",
-  "devDependencies": {},
+  "devDependencies": {
+    "sharp": "^0.33.0"
+  },
   "dependencies": {}
 }
 
