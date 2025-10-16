@@ -26,7 +26,7 @@ const profileData = {
         },
         {
             platform: "portfolio",
-            url: "#",
+            url: "https://uska.app/portfolio",
             displayInHeader: true
         },
         {
@@ -79,7 +79,7 @@ const profileData = {
             type: "image-showcase",
             title: "Portfolio",
             subtitle: "",
-            url: "#",
+            url: "https://uska.app/portfolio",
             imageGallery: [
                 "images/portfolio1.jpg",
                 "images/portfolio2.jpg",
