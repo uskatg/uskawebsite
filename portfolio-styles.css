@@ -14,12 +14,13 @@ body {
     background-color: #ffffff;
     background-image: url('images/optimized/portfolioWebsitebackground.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: #ffffff;
     line-height: 1.6;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 img {
@@ -359,6 +360,129 @@ button {
     height: 2px;
     background: #000000;
     width: 100%;
+}
+
+/* ==================== COMMISSION PAGE ==================== */
+.commission-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px 60px;
+}
+
+.contact-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #666666;
+    margin-bottom: 15px;
+}
+
+.commission-contact {
+    margin-bottom: 30px;
+}
+
+.contact-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #666666;
+    font-weight: 700;
+    margin: 0;
+    max-width: none;
+}
+
+.email-link {
+    color: #000000;
+    text-decoration: underline;
+    transition: opacity 0.3s ease;
+}
+
+.email-link:hover {
+    opacity: 0.7;
+}
+
+.instagram-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #000000;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+    margin-left: 8px;
+}
+
+.instagram-button:hover {
+    background-color: #333333;
+}
+
+.instagram-button svg {
+    flex-shrink: 0;
+}
+
+.commission-type-section {
+    margin-bottom: 40px;
+}
+
+.commission-type-name {
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+    margin-bottom: 15px;
+}
+
+.terms-section {
+    margin-bottom: 40px;
+}
+
+.terms-text {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666666;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.terms-text strong {
+    color: #000000;
+}
+
+.commission-type-detail {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #666666;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.commission-examples {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.example-card {
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.example-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+}
+
+.example-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1 / 1;
 }
 
 /* ==================== CONVENTIONS PAGE ==================== */
@@ -827,6 +951,39 @@ button {
 
     .section-subtitle {
         font-size: 18px;
+    }
+
+    .commission-content {
+        padding: 20px;
+    }
+
+    .contact-text {
+        font-size: 16px;
+    }
+
+    .instagram-button {
+        display: flex;
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .commission-type-name {
+        font-size: 22px;
+    }
+
+    .commission-type-detail {
+        font-size: 15px;
+    }
+
+    .terms-text {
+        font-size: 15px;
+    }
+
+    .commission-examples {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 
     .convention-section {
